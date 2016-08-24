@@ -1,0 +1,16 @@
+  <h1>{{title}}</h1>
+  <p>{{price}}</p>
+  <p>{{description}}</p>
+  <img src = '{{imageUri}}' style = 'width: 200px; height: 200px;'>
+
+  {{#each subproduct}}
+    <div>
+      {{title}}
+      {{price}}
+      {{stock}}
+      <form>
+        <input type='text'></input>
+      </form>
+      <button><a href="/cart/add/{{_id}}">Add</a></button>
+    </div>
+  {{/each}}

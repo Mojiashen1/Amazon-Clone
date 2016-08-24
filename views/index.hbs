@@ -1,0 +1,23 @@
+<h1>Welcome to our store</h1>
+<p>There are {{number}} products in your cart</p>
+
+<form action = '/cart'>
+  <p>View your cart</p>
+</form>
+
+{{#each products}}
+  <h4>{{title}}</p>
+  <p>{{price}}</p>
+  <p>{{description}}</p>
+  <img src = '{{imageUri}}' style = 'width: 100px; height: 100px;'>
+
+  {{#each subproducts}}
+    <p>{{title}}</p>
+    <p>{{price}}</p>
+  {{/each}}
+
+  <form action='/cart/add/{{_id}}'>
+    <button>Add</button>
+  </form>
+  
+{{/each}}
